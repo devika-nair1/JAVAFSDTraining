@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body ng-app="myApp">
+
+<table ng-controller="myCtrl" border="1">
+<tr ng-repeat="x in records">
+  <td>{{x.Name}}</td>
+  <td>{{x.Country}}</td>  
+</tr>
+</table>
+
+<script>
+var app = angular.module("myApp", []);
+app.controller("myCtrl", function($scope) {
+  $scope.records = [
+    {
+      "Name" : "Devika",
+      "Country" : "Germany"
+    },
+    {
+      "Name" : "Niya",
+      "Country" : "Sweden"
+    },
+    {
+      "Name" : "Irin",
+      "Country" : "Mexico"
+    },
+    {
+      "Name" : "Feba",
+      "Country" : "Austria"
+    },
+    {
+        "Name" : "Anjali",
+        "Country" : "Italy"
+      }
+  ]
+});
+</script>
+
+</body>
+</html>
