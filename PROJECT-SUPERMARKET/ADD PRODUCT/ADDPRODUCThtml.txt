@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>   
+    <link rel = "stylesheet" type = "text/css" href = "addproduct.css" media = "screen" /> 
+     <link rel = "stylesheet" type = "text/css" href = "navbarstyle.css" media = "screen" /> 
+  </head>  
+    
+  
+<body>
+
+  <body>
+
+   <div class="navbar">
+  <a href="#home">Home</a>
+  <a href="#news">News</a>
+  <a href="#contact">Contact</a>
+  <a href="#about">About</a>
+
+  <div class="dropdown">
+    <button class="dropbtn">View Product 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Vegetable</a>
+      <a href="#">Fruits</a>
+      <a href="#">Snacks</a>
+    </div>
+  </div> 
+  <a href="#addproduct">Add Product</a>
+  <a href="#createbill">Create Bill</a>
+  <a href="#logout">Logout</a>
+
+
+</div>
+
+ <h2> Add Product </h2>
+<div class="container">
+    <form id="form" class="form">
+      <div class="form-control">
+      <label for="productid">Product Id</label>
+      <input type="text" placeholder="Product Id" id="productid" required />  
+    </div>
+    <div class="form-control">
+      <label for="itemname">Item Name</label>
+      <input type="text" placeholder="Item Name" id="itemname" required />  
+    </div>
+    
+    <div class="form-control">
+      <label for="quantity">Quantity</label>
+      <input type="text" placeholder="Quantity" id="quantity" required/>
+    </div>
+    <div class="form-control">
+      <label for="itemprice">Item Price</label>
+      <input type="text" placeholder="Item Price" id="itemprice" required/>
+    </div>
+    <div class="form-control">
+      <label for="retailprice">Retail Price</label>
+      <input type="text" placeholder="Retail Price" id="retailprice" required/>
+    </div>
+
+    <input type="submit" value="Add Product">
+  </form>
+</div>
+    
+
+    </form>
+   
+    </body>  
+    </html>
