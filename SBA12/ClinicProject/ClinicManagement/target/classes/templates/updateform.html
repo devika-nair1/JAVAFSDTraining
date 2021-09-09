@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Add Medicine</title>
+<link rel = "stylesheet" th:href="@{/css/updateform.css}"/>
+<link rel="stylesheet" th:href="@{/css/navbar.css}">
+   
+   </head>
+
+<body>
+   
+
+  <div class="navbar">
+	<a href="home">Home</a>
+	<a href="addpatients">Add Patient</a>
+	<a href="viewpatients">View Patient</a>
+	<a href="addmedicine">Add Medicine</a>
+	<a href="viewmedicine">View Medicine</a>
+	<a href="bill">Bill</a>
+	<a href="viewbill">View Bill</a>
+	<a href="/employees">Admin Details</a>
+	<a href="/">Logout</a>
+</div>
+
+ <h1>Update Medicines</h1>
+  <div class = "container">
+ 
+ <br> 
+		<form action="#" th:action="@{/save}" th:object="${medicine}"method="POST">
+                <div class="form-group">
+					
+						<table>
+							<tr><td>
+                             <label > Medicine Name:</label>   <br>
+                         </td><td>
+		<input type="hidden" th:field="*{id}" />
+		<input type="text" th:field="*{medname}" class="form-control">
+		  </td>
+              </tr>
+			<tr><td>
+                             <label >Price :</label>   <br>
+                         </td><td>
+		<input type="text" th:field="*{price}" class="form-control"><br>
+
+</td>
+			  </tr>
+			  <tr>
+				    <td colspan="2">
+                       <button type="submit" class="form-control btn" >Save Medicine</button>
+                    </td>
+                        </tr> 
+	
+		</table>
+	
+				
+		</div>
+		</form>
+		
+	</div>    
+</body>
+
+</html>
