@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<link rel = "stylesheet" th:href="@{/css/index.css}"/>
+<title>Insert title here</title>
+</head>
+<body>
+
+<h1>F.I.A.N.D CLINIC</h1>
+
+<h2> Login Here . . . ! ! </h2>
+<div class="container">
+<form action="login" method = "post">
+
+
+	<label for="userid">User Id	</label>
+	<input type= "text" name = "user_id"  >
+	
+	<label for="password">Password	</label>
+	<input type= "password" name = "password"  >
+	
+	
+</form>
+
+<!-- <input type="submit" value="Login"> -->
+<a th:href=@{/home}>Submit</a>
+
+</div>
+</body>
+</html>

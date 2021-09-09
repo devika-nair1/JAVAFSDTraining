@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+
+<meta charset="ISO-8859-1">
+<link rel = "stylesheet" th:href="@{/css/addpatients.css}"/>
+<link rel="stylesheet" th:href="@{/css/navbar.css}">
+<title>Insert title here</title>
+</head>
+<body>
+
+
+  <div class="navbar">
+	<a href="home">Home</a>
+	<a href="addpatients">Add Patient</a>
+	<a href="viewpatients">View Patient</a>
+	<a href="addmedicine">Add Medicine</a>
+	<a href="viewmedicine">View Medicine</a>
+	<a href="bill">Bill</a>
+	<a href="viewbill">View Bill</a>
+	<a href="/employees">Admin Details</a>
+	<a href="/">Logout</a>
+</div>
+
+
+<h1>Add Patient</h1>
+<div class="container">
+ <form action="#" th:action="@{/saved}" th:object="${patients}"
+			method="POST">
+			First Name<input type="text" th:field="*{fname}"><br>
+				
+				Last name<input type="text" th:field="*{lname}"><br>
+				Email<input type="text" th:field="*{email}"><br>
+				Phone Number<input type="text" th:field="*{pno}"><br>
+				
+				
+				<input type="submit" value = " Save Patients">
+		</form>
+		</div>
+</body>
+</html>

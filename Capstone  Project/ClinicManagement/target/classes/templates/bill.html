@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel = "stylesheet" th:href="@{/css/bill.css}"/>
+<link rel="stylesheet" th:href="@{/css/navbar.css}">
+
+</head>
+<body>
+
+ <div class="navbar">
+	<a href="home">Home</a>
+	<a href="addpatients">Add Patient</a>
+	<a href="viewpatients">View Patient</a>
+	<a href="addmedicine">Add Medicine</a>
+	<a href="viewmedicine">View Medicine</a>
+	<a href="bill">Bill</a>
+	<a href="viewbill">View Bill</a>
+	<a href="/employees">Admin Details</a>
+	<a href="/">Logout</a>
+</div>
+
+
+<h1>Bill</h1>
+
+<div class="container">
+
+    <!--   <form id="form" class="form" action="#" th:action="@{/saves}" th:object="${bill}"
+			method="POST">   -->
+      
+      <form action="#" th:action="@{/saves}" th:object="${bill}"
+			method="POST">
+      
+     			Bill No<input type="text" th:field="*{id}"><br>
+				
+				Date<input type="text" th:field="*{date}"><br>
+				Patient Name<input type="text" th:field="*{patientname}"><br>
+				Age<input type="text" th:field="*{age}"><br>
+				Doctor Name<input type="text" th:field="*{doctorname}"><br>				
+				Phone Number<input type="text" th:field="*{phoneno}"><br>
+				Medicine<input type="text" th:field="*{medicine}"><br>
+				Total<input type="text" th:field="*{total}"><br>
+				
+				
+				<input type="submit" value = " Save Bill">
+		</form>
+		</div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Add Medicine</title>
+<link rel = "stylesheet" th:href="@{/css/viewbill.css}"/>
+<link rel="stylesheet" th:href="@{/css/navbar.css}">
+
+    
+    </head>     
+    
+    
+        <body>
+        
+    <div class="navbar">
+	<a href="home">Home</a>
+	<a href="addpatients">Add Patient</a>
+	<a href="viewpatients">View Patient</a>
+	<a href="addmedicine">Add Medicine</a>
+	<a href="viewmedicine">View Medicine</a>
+	<a href="bill">Bill</a>
+	<a href="viewbill">View Bill</a>
+	<a href="/employees">Admin Details</a>
+	<a href="/">Logout</a>
+    </div>    
+    
+    <h1>View Bill</h1>   
+          
+
+<table>
+			
+				<tr>
+					
+				<th>Bill No</th>
+				<th>Date</th>
+				<th>Patient Name</th>
+				<th>Age</th>
+				<th>Doctor Name</th>
+				<th>Phone Number</th>
+				<th>Medicine</th>
+				<th>Total</th>
+			</tr>
+		
+		
+			<tr th:each="bill : ${lisBill}">
+				<td th:text="${bill.id}"></td>
+				<td th:text="${bill.date}"></td>
+				<td th:text="${bill.patientname}"></td>
+				<td th:text="${bill.age}"></td>
+				<td th:text="${bill.doctorname}"></td>
+				<td th:text="${bill.phoneno}"></td>
+				<td th:text="${bill.medicine}"></td>
+				<td th:text="${bill.total}"></td>
+
+				
+			</tr>
+	
+	
+
+	
+
+    
+</body>
+
+</html>
